@@ -1,0 +1,9 @@
+[glossary]
+= Sözlük
+
+
+[glossary]
+
+Terim-I:: Karşılık gelen tanım.
+
+Terim-II:: Karşılık gelen tanım.

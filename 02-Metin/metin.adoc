@@ -1,0 +1,77 @@
+
+
+Paragraflar AsciiDoc'ta herhangi bir özel biçimlendirme gerektirmez.
+
+Bir paragraf ardışık metnin yalnızca bir veya daha fazla satırıdır.
+
+Yeni bir paragrafa başlamak için, en az bir boş satır ile ayırın.
+Paragraf içindeki yeni satırlar görüntülenmez.
+
+=== Satır Sonunu Sabitleme
+
+Alt alta yazılmış cümleler bir paragrafta birleştirileceğinden cümleleri ayrı bir satıra koymak için satır sonuna bir boşluk ardından artı işareti (+) eklenmelidir.Bİr diğer seçenek ise paragraftan önce hardbreaks eklenmesidir.
+
+[source,Asciidoc]
+----
+Kar kırmızıdır. +
+Göl beyaz
+----
+
+Kar kırmızıdır +
+Göl beyaz
+
+[source,Asciidoc]
+----
+[%hardbreaks]
+Yağmur ıslaktır.
+Güneş sıcak.
+----
+
+[%hardbreaks]
+Yağmur ıslaktır.
+Güneş sıcak.
+
+Belgenin tamamında satır sonlarını korumak için, belgenin başlığına hardbreaks niteliğini eklenmelidir.
+
+[source,Asciidoc]
+----
+
+= Satır sonunu koruma
+:hardbreaks:
+
+Bugün kar yağdı.
+Yarın güneş açacak.
+----
+
+=== Satır sonunu koruma
+:hardbreaks:
+
+Bugün kar yağdı.
+Yarın güneş açacak.
+
+=== AsciiDoc'da Metin Biçimlendirme
+
+Tıpkı konuştuğumuzda bazı kelimeleri ve cümleleri vurguladığımız gibi, metinleri biçimlendirme ile vurgulayabiliriz. Kalın veya tek aralık gibi bu biçimlendirme, çevreleyen harfler, kelimeler veya basit işaretleme içeren ifadelerle belirtilir.
+
+==== Kalın ve italik metin
+
+Bir sözcüğü vurgulamanın en yaygın iki yolu, onu koyu veya italik olarak biçimlendirmektir.
+
+Bir kelimeye veya cümleye kalın stil uygulamak için, biçimlendirmek istediğiniz metnin başına ve sonuna bir yıldız işareti ( * ) yerleştirin. Bir harf veya harfleri bir metin dizisinde kalınlaştırmak için, harf veya harflerden önce ve sonra iki yıldız işareti ( ** ) yerleştirin .
+
+Harfler ve kelimeler bir ( _ ) veya iki ( __ ) alt çizgi kullanılarak italikleştirilir . Bir harf veya sözcüğü kalınlaştırmak ve italikleştirmek istediğinizde, kalın işaretleme en dıştaki işaretleme olmalıdır.
+
+==== Örnekler
+
+_Elma_ **Eski Türkçe'de** *_alma_* diye bilinen adının, _meyvenin rengi olan_ **al** (__kırmızı__)'dan geldiği **bilinmektedir**.
+
+
+==== Altı ve üstü çizili metin
+
+Bir kelime veya cümleyi altı çizili göstermek için kelime veya cümlenin başına ( [underline]# ) sonuna ise ( # ) işaretlerini yerleştiririz.
+
+Bir kelime veya cümleyi üstü çizili göstermek için kelime veya cümlenin başına ( [line-through]# ) sonuna ise ( # ) işaretlerini yerleştiririz.
+
+==== Örnekler
+
+[underline]#AsciiDoc# öğrenilmesi [line-through]#kolay# olduğu kadar [line-through]#zor# bir uygulamadır.

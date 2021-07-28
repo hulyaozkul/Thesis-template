@@ -1,0 +1,87 @@
+
+
+Görüntüler, varsayılan olarak boş olan *images::* belge özniteliğinin değerine göre çözümlenir . *images::* her görüntü makrosunda resimlerinize ortak yolu zor kodlamaktan kaçınmak için bu özelliği kullanmanız teşvik edilir .
+
+*images::* nitelik mutlak yolu göreli yolu veya temel URL olabilir. Resim hedefi bir URL veya mutlak bir yol olduğunda, imagesdir öneki hazır değildir.
+
+* Bir görüntüyü kendi satırına dahil etmek için (yani, bir blok görüntü ), *image::* öndeki dosya adını ve köşeli parantezleri kullanın.
+
+
+=== Örnek 
+
+image::images/sunset.png[]
+
+* Alt metni belirtmek istiyorsanız, köşeli parantezin içine ekleyin:
+
+=== Örnek 
+
+image::images/sunset.png[Sunset]
+
+* Ayrıca görüntüye bir kimlik, bir başlık verebilir, boyutlarını ayarlayabilir ve bir bağlantı oluşturabilirsiniz.
+
+
+.  [#img-sunset] 
+.  .Bir dağ gün batımı 
+.  [link=https://www.flickr.com/photos/javh/5448336655] 
+.  image::images/sunset.png[Sunset,300,200] 
+
+1->Bloğa bir kimlik atar;https://asciidoctor.org/docs/user-manual/#images[ bkz bir Anchor tanımlama] .
+
+2->Oluşturulduğunda görüntünün altında görüntülenecek blok görüntünün başlığını tanımlar.
+
+3->link görüntüyü bir bağlantı yapar (bu, makro bloğun öznitelik listesinde de tanımlanabilir)
+
+4->İlk konumsal nitelik olan Sunset , görüntünün alt metnidir.
+İkinci ve üçüncü konumsal nitelikler sırasıyla genişlik ve yüksekliği tanımlar.
+
+*Sonuç aşağıdaki gibi görünüyor.*
+
+[#img-sunset] 
+.Bir dağ gün batımı
+[link=https://www.flickr.com/photos/javh/5448336655] 
+image::images/sunset.png[Sunset,300,200]   
+
+
+===  Şekil Başlıklarını Özelleştirme(Customize the Figure Captions)
+
+Asciidoctor ile belgelerimizdeki görüntüleri *image* direktifi ile kullanabiliriz.Belge dönüştürüldüğünde, her resim bir resim yazısı alır.Varsayılan olarak resim yazısı etiketi, __Figure __görüntünün belgedeki konumu için bir sayı alır.Bu yüzden, ilk görüntünün _Figure 1.._ şeklinde bir başlığı vardır.Görüntüye bir blok başlığı eklersek (. İle eklenmiş metin), o zaman da başlıkta aynı metin kullanılır.Resim yazısı etiketini, resim sayacını, resim yazı metnini özelleştirebilir veya belge ve resim niteliklerinin bir birleşimini kullanarak resim yazılarını devre dışı bırakabiliriz.
+
+Aşağıdaki Asciidoctor işaretlemesine sahibiz. Birkaç resim ekliyoruz ve resim yazısı ayarlarını özelleştiriyoruz. Resim yazısı etiketini (Figure) değiştirmek için, resim yazısı(figure caption) belgesi niteliği için farklı bir değer belirledik. Örneğimizde *Logo* değerini kullanıyoruz. Bu tanımlamayı izleyen tüm başlıklar, Logo etiketine sahip olacaktır.
+
+Ayrı bir sayaç kullanmak için, resmimizin başlık özniteliği içindeki bir sayaç özelliğini kullanabiliriz. Örneğimizde bunu *Gradle* logosu için kullanıyoruz. Blok başlığı yerine başka bir başlık metni kullanmak istiyorsak, bir görüntü için title özelliğini kullanabiliriz.
+
+Son olarak, tüm resim başlıklarını devre dışı bırakmak için resim başlığı belge özelliğini yok sayıyoruz.
+
+=== Figure caption
+ 
+// Default the figure caption
+// label is Figure.
+.SDKMAN!
+image::images//sdkman-logo.png[]
+ 
+// Set caption for figures
+// for the rest of the document
+// to the value Logo.
+:figure-caption: Şekil
+ 
+// The figure caption label is Logo.
+.Groovy
+image::images//groovy-logo.png[]
+ 
+// Custom caption label for this image
+// where we can still use a counter.
+.Gradle
+image::images//gradle-logo.png[caption="Logo 1-{counter:logo}"]
+ 
+// Instead of using the image block
+// title in the caption we define
+// our own caption text with the title
+// attribute.
+.Ratpack
+image::images//ratpack-logo.png[title="Ratpack library"]
+ 
+// Disable all captions for figures.
+:!figure-caption:
+ 
+.Grails
+image::images//grails-logo.png[]

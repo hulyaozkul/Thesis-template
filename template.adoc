@@ -10,24 +10,28 @@ Tarih
 
 ==  Proje Adı 
 
-=== Amaç :
+include::amac\preface.adoc[]
 
-== Konu -I 
+include::sozluk\glossary.adoc[]
 
-include::00-Konu\00-konu.adoc[]
+== Metin
 
-== Konu -II	
+include::metin\metin.adoc[]
 
-include::01-Konu\00-konu.adoc[]
-		
-include::01-Konu\01-konu.adoc[]
+== Görüntü Ekleme
 
-include::01-Konu\02-konu.adoc[]
+include::Goruntu\images.adoc[]
 
-== Konu -III	
+== Tablo Ekleme
 
-include::02-Konu\00-konu.adoc[]
-		
-include::02-Konu\01-konu.adoc[]
+include::Tablo\tablo.adoc[]
 
-include::02-Konu\02-konu.adoc[]
+== Kod Ekleme
+
+include::Kod\kod.adoc[]
+
+== Kaynakça
+
+include::Kaynakca\bibliography.adoc[]
+
+

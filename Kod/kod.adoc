@@ -1,0 +1,140 @@
+
+
+Geliştiriciler, kodun yapısını vurgulamak için renklendirilmiş kaynak kodunu görmeye alışıktır (anahtar kelimeler, türler, sınırlayıcılar vb.). Bu teknik _sözdizimi vurgulama_ olarak bilinir . Bu teknik çok yaygın olduğu için Asciidoctor, belgenizdeki kaynak kod bloklarını vurgulamak için sözdizimi için zengin kütüphaneleri bir araya getirir. Entegre kütüphanelerin listesi Rouge, CodeRay, Pygments, highlight.js ve güzelleştirmeyi içerir.
+
+=== Kaynak Kod
+
+====  Başlıklı listeleme bloğu
+
+.Başlıklı listeleme bloğu, sözdizimi vurgulama yok
+****
+.Gemfile.lock
+----
+GEM
+  remote: https://rubygems.org/
+  specs:
+    asciidoctor (1.5.6.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  asciidoctor (~> 1.5.6.1)
+----
+****
+
+====  Başlık ve sözdizimi vurgulamalı kod bloğu
+
+.Başlık ve sözdizimi vurgulamalı kod bloğu
+****
+.app.rb
+[source,ruby]
+----
+require 'sinatra'
+
+get '/hi' do
+  "Hello World!"
+end
+----
+****
+
+===  Kaynak Vurgulamayı Etkinleştirme
+
+Etkinleştirildiğinde, sözdizimi vurgulama, *source* blok stili ve kaynak dili olan listeleme veya değişmez bloklara uygulanır . Ancak, sözdizimi vurgulama varsayılan olarak etkin değildir .
+
+Bir belgede sözdizimi vurgulamasını etkinleştirmek için *source-highlighter* belge niteliğini ayarlamanız gerekir . Bu niteliği belgede veya CLI veya API'den ayarlayabilirsiniz.
+
+Özelliği belgede ayarlarsanız , https://asciidoctor.org/docs/user-manual/#doc-header[belge başlığında] tanımlanması gerekir .
+
+----
+= Document Title
+:source-highlighter: <value>
+----
+
+=== Kaynak Vurgulama 
+
+Kaynak koduna vurgulama uygulamak için, *source* blok stilini bir listeleme bloğuna, değişmez bloğa veya paragrafa eklemeniz ve bir kaynak dil belirtmeniz gerekir.
+
+====  Belirtme çizgileri olan kod bloğu
+
+.Belirtme çizgileri olan kod bloğu
+****
+[source,ruby]
+----
+require 'sinatra' // <1>
+
+get '/hi' do // <2>
+  "Hello World!" // <3>
+end
+----
+<1> Kütüphane içe aktarma
+<2> URL eşleme
+<3> HTTP yanıt gövdesi 
+****
+
+==== Seçilemeyen bilgileri içeren kod bloğu
+
+.Seçilemeyen bilgileri içeren kod bloğu
+****
+  ----
+ kod satırı // <1>
+ kod satırı # <2>
+ kod satırı ;; <3>
+ ----
+ 
+<1> C tarzı diller için bir çizgi yorumunun arkasındaki belirtme çizgisi.
+
+<2> Ruby, Python, Perl, vb. İçin çizgi yorumunun arkasındaki belirtme çizgisi.
+<3> Clojure için bir çizgi yorum arkasındaki belirtme çizgisi.
+****
+
+====  Seçilemeyen bir belirtme çizgisine sahip XML kod bloğu
+
+.Seçilemeyen bir belirtme çizgisine sahip XML kod bloğu
+****
+[source,xml]
+----
+<section>
+  <title>Bölüm Başlığı</title> <!--1-->
+</section>
+----
+<1> Bölüm başlığı gerekli. 
+****
+
+====  Dosyadan kaynaklı kod bloğu
+
+.Kaynak Kodu dahil eden kod bloğu
+ [source,ruby]
+ ----
+ include::app.rb[]
+ ----
+
+====  Kaynak dizine göre dosyadan kaynaklı kod bloğu
+
+.Kaynak dizine göre dosyadan kaynaklı kod bloğu
+ :sourcedir: src/main/java
+ [source,java]
+ ----
+ include::{sourcedir}/org/asciidoctor/Asciidoctor.java[]
+ ----
+
+====  Kaynaktan gelen satır arası kod bloğu
+
+.Kaynaktan gelen satır arası kod bloğu
+ [source,ruby,indent=0]
+ ----
+ include::lib/document.rb[lines=5..10]
+ ----
+
+NOTE: indent 0 olduğunda, satır bloğu girintisi sıyrılır (sekmeler 4 boşlukla değiştirilir).
+indent > 0 olduğunda, öncü blok girintisi önce sıyrılır (sekmeler 4 boşlukla değiştirilir), sonra bir blok bu değere eşit sütun sayısıyla girintili olur.
+
+====  Sınırlayıcı içermeyen kod bloğu
+
+.Sınırlayıcı içermeyen kod bloğu (boş satır yok)
+****
+[source,xml]
+<meta name="viewport"
+  content="width=device-width, initial-scale=1.0">
+ Bu normal bir içeriktir.
+****

@@ -1,0 +1,58 @@
+
+Asciidoctor'da bir tablo tanımladığımız zaman, sütunların tümü aynı genişliğe sahiptir ve tablo sayfanın tüm genişliğini gösterir. Tabiki bunu tanımladığımız zaman bunu değiştirebiliriz. Tablonun sütun  sayısını *column* niteliği ile değiştirebiliriz . Satır sayısını *rows* özniteliği ile belirtiriz .
+
+Aşağıdaki sözdizimini kullanarak Asciidoc'ta tablolar da oluşturabilirsiniz.
+
+=== Örnekler
+
+.Bu tablonun isteğe bağlı başlığı
+|===
+| Sütun 1'in Adı | Sütun 2'nin Adı
+
+| Sütun 1'deki hücre, satır 1
+| Sütun 2'deki hücre, satır 1
+| Sütun 1'deki hücre, satır 2
+| Sütun 2'deki hücre, satır 2
+|===
+
+Tablo oluştururken kullanım amacına göre şekil ayarı verebiliriz.Örneğin;
+
+=== Örnekler
+
+.Örnek bir tablo 1
+[options="header,footer"]
+|=======================
+|0    |a          |4
+|1    |b          |3
+|2    |c          |2
+|3    |d          |1
+|4    |e          |0
+|=======================
+
+=== Örnekler
+
+.Örnek bir tablo 2
+[format="csv",width="60%",cols="4"]
+[frame="topbot",grid="none"]
+|======
+1,2,3,4
+a,b,c,d
+A,B,C,D
+|======
+
+=== Örnekler
+
+
+.Örnek bir tablo 3
+|====
+|Tarih |Saat |Kontenjan |Ders
+
+|22-Aug-08 .2+^.^|10:24 | 157 |
+Bilgisayar Mühendisliğine Giriş(1. Sınıflar için)
+
+|22-Aug-08 | 152 |
+Diferansiyel Denklemler(2.Sınıflar için)
+
+|24-Aug-08 3+^|TATİL
+
+|====

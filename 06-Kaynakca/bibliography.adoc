@@ -1,0 +1,13 @@
+[bibliography]
+
+- [1] İNNER, A. B., & KÜÇÜK, S. Genel Stewart Platformları (GSP) için Boyutsal Eniyileme Yazılımının ve Yeniden Ayarlanabilir 3 Bacaklı bir GSP Mekanizmasının Geliştirilmesi.
+- [2] EKİM, H. E., & İNNER, A. B. (2021). DUYGU ANALİZİ VE FİKİR MADENCİLİĞİ UYGULAMALARI ÜZERİNE LİTERATÜR TARAMASI. Kahramanmaraş Sütçü İmam Üniversitesi Mühendislik Bilimleri Dergisi, 24(2), 93-114.
+- [3] İNNER, B., Küçük, S., & Bingül, Z. (2010). ‘Farklı yapıdaki stewart platformunlarının tek bir çatı üzerinden tasarımı ve benzetimi. Otomatik Kontrol Ulusal Toplantısı, Sivas.
+
+.Websites
+
+[bibliography]
+- http://nodejs.org/[Official Node.js Website]
+- http://nodejs.org/docs/latest/api/index.html[Latest Node.js documentation]
+- http://nodeguide.com/style.html[Node.js Style Guide]
+- http://www.nodebeginner.org/[Node.js Tutorial]
