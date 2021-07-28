@@ -1,0 +1,33 @@
+= Bitirme Çalışması
+Yazar
+Tarih
+:encoding: utf-8
+:doctype: book
+:lang: tr
+:toc: left
+:toclevels: 2
+:numbered:
+
+==  Proje Adı 
+
+=== Amaç :
+
+== Konu -I 
+
+include::00-Konu\00-konu.adoc[]
+
+== Konu -II	
+
+include::01-Konu\00-konu.adoc[]
+		
+include::01-Konu\01-konu.adoc[]
+
+include::01-Konu\02-konu.adoc[]
+
+== Konu -III	
+
+include::02-Konu\00-konu.adoc[]
+		
+include::02-Konu\01-konu.adoc[]
+
+include::02-Konu\02-konu.adoc[]

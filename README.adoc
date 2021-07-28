@@ -1,2 +1,15 @@
-# Thesis-template
-Tez şablonu
+= Bitirme Çalışması
+
+==  Proje Adı 
+
+===  Yazar
+
+
+===	Konu başlığı - I
+
+		
+===	Konu başlığı - II	
+	
+		
+===	Konu başlığı - III	
+		
