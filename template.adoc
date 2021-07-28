@@ -10,28 +10,28 @@ Tarih
 
 ==  Proje Adı 
 
-include::amac\preface.adoc[]
+include::00-Amac\preface.adoc[]
 
-include::sozluk\glossary.adoc[]
+include::01-Sozluk\glossary.adoc[]
 
 == Metin
 
-include::metin\metin.adoc[]
+include::02-Metin\metin.adoc[]
 
 == Görüntü Ekleme
 
-include::Goruntu\images.adoc[]
+include::03-Goruntu\images.adoc[]
 
 == Tablo Ekleme
 
-include::Tablo\tablo.adoc[]
+include::04-Tablo\tablo.adoc[]
 
 == Kod Ekleme
 
-include::Kod\kod.adoc[]
+include::05-Kod\kod.adoc[]
 
 == Kaynakça
 
-include::Kaynakca\bibliography.adoc[]
+include::06-Kaynakca\bibliography.adoc[]
 
 
